@@ -71,6 +71,19 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(_config, _ctx) {}
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(ts|js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+          options: {
+            fix: true
+          }
+        })
+      }
+    }
   }
 }
