@@ -1,5 +1,6 @@
 import express, { Application } from 'express'
 import bodyParser from 'body-parser'
+import router from './router'
 
 /**
  * Configuring Express application
@@ -14,6 +15,11 @@ app.use(
     limit: '50mb',
   })
 )
+
+/**
+ * Registering routes
+ */
+router(app)
 
 export default {
   path: '/api',
