@@ -11,10 +11,10 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -37,7 +37,7 @@ module.exports = {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    'nuxt-i18n'
+    'nuxt-i18n',
   ],
   /*
    ** Nuxt.js modules
@@ -47,7 +47,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -61,12 +61,12 @@ module.exports = {
     postcss: {
       preset: {
         features: {
-          customProperties: false
-        }
+          customProperties: false,
+        },
       },
       plugins: {
-        tailwindcss: require('./tailwind.config')
-      }
+        tailwindcss: require('./tailwind.config'),
+      },
     },
     /*
      ** You can extend webpack config here
@@ -80,10 +80,21 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
           options: {
-            fix: true
-          }
+            fix: true,
+          },
         })
       }
-    }
-  }
+    },
+  },
+
+  /*
+   ** Typescript module configuration
+   ** See https://typescript.nuxtjs.org
+   */
+  typescript: {
+    typeCheck: {
+      eslint: true,
+      vue: true,
+    },
+  },
 }

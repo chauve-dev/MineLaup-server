@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     extend: {},
-    darkSelector: '.dark-mode'
+    darkSelector: '.dark-mode',
   },
   variants: {
     backgroundColor: [
@@ -10,7 +10,7 @@ module.exports = {
       'dark-group-hover',
       'dark-even',
       'dark-odd',
-      'hover'
+      'hover',
     ],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within', 'hover'],
     textColor: [
@@ -18,8 +18,8 @@ module.exports = {
       'dark-hover',
       'dark-active',
       'hover',
-      'dark-placeholder'
-    ]
+      'dark-placeholder',
+    ],
   },
-  plugins: [require('tailwindcss-dark-mode')()]
+  plugins: [require('tailwindcss-dark-mode')()],
 }
