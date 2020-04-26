@@ -1,6 +1,12 @@
 import express, { Application } from 'express'
 import bodyParser from 'body-parser'
 import router from './router'
+import config from './utils/config'
+
+/**
+ * Force the config generation
+ */
+config.get('')
 
 /**
  * Configuring Express application
